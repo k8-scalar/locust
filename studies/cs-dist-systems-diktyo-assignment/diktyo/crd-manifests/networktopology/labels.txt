@@ -1,0 +1,23 @@
+# Example for labels:
+
+# Region label: "topology.kubernetes.io/region"
+# Zone Label:   "topology.kubernetes.io/zone"
+
+# 1 Regions:  belgium
+# 5 Zones:    z1, .., z5
+
+# regions:
+
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/region=belgium --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/region=belgium --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/region=belgium --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/region=belgium --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/region=belgium --overwrite
+
+# zones:
+
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/zone=z1 --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/zone=z2 --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/zone=z3 --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/zone=z4 --overwrite
+kubectl label nodes {NODE_NAME} topology.kubernetes.io/zone=z5 --overwrite
