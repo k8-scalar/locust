@@ -1,0 +1,27 @@
+# Example for traffic control:
+
+# 5 nodes:    n1, .., n5 ( Assuming these node names. Replace based on your cluster! )
+
+# Run on each node: 
+
+#n1 (master) do not add delays to the master 
+
+#Run the following command on node n2 (worker node)
+
+sudo tc qdisc add dev {INTERFACE_NAME} root netem delay 15ms 
+
+#Run the following command on node n3 (worker node)
+
+sudo tc qdisc add dev {INTERFACE_NAME} root netem delay 30ms 
+
+#Run the following command on node n4 (worker node)
+
+sudo tc qdisc add dev {INTERFACE_NAME} root netem delay 45ms 
+
+#Run the following command on node n5 (worker node)
+
+sudo tc qdisc add dev {INTERFACE_NAME} root netem delay 60ms 
+
+#NOTES
+
+INTERFACE_NAME could be for instance enp1s0f0. Check with ifconfig

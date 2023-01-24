@@ -1,0 +1,324 @@
+Can't locate JSON/Parse.pm in @INC (you may need to install the JSON::Parse module) (@INC contains: /usr/lib/perl5/site_perl /usr/share/perl5/site_perl /usr/lib/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/core_perl /usr/share/perl5/core_perl) at runNetperfConfigmapV2.pl line 21.
+BEGIN failed--compilation aborted at runNetperfConfigmapV2.pl line 21.
+No Baseline flag is: 0
+Node: 4
+Node: kube-c2-1
+Node: kube-ub19-1
+Node: kube-ub19-2
+Node: kube-ub19-3
+Node: kube-ub19-5
+Node: kubeadm-k1
+Node: kubeadm-k1-lostson
+Node: kubeadm-ubuntu19
+Pod: netperf-host-2d7sq  in  default 
+Pod: netperf-host-5kvdn  in  default 
+Pod: netperf-host-lnzff  in  default 
+Pod: netperf-host-qd78f  in  default 
+Pod: netperf-host-qnz4z  in  default 
+Pod: netperf-host-rfg8l  in  default 
+Pod: netperf-host-v5s28  in  default 
+Pod: netperf-host-v7vzk  in  default 
+Pod: netperf-host-zdlc9  in  default 
+Pod: netperf-pod-4rwgz  in  default 
+Pod: netperf-pod-77c9846498-5q2ln  in  default 
+Pod: netperf-pod-77c9846498-bcqsb  in  default 
+Pod: netperf-pod-d88gf  in  default 
+Pod: netperf-pod-gxlgv  in  default 
+Pod: netperf-pod-j6f4z  in  default 
+Pod: netperf-pod-lmgbq  in  default 
+Pod: netperf-pod-mph2c  in  default 
+Pod: netperf-pod-qr4dt  in  default 
+Pod: netperf-pod-vkqds  in  default 
+Pod: netperf-pod-z2gz7  in  default 
+service: netperf-server  in  default IP=10.104.84.91 <none> app=netperf-pod 
+kubeadm-k1 HASH(0x55cf7d391a88) kubeadm-ubuntu19 HASH(0x55cf7d3a3b28) kubeadm-k1-lostson HASH(0x55cf7d391ef0) kube-ub19-2 HASH(0x55cf7d20c948) kube-ub19-3 HASH(0x55cf7d20c8b8) kube-ub19-1 HASH(0x55cf7d08d028) kube-ub19-5 HASH(0x55cf7d37d778) kube-c2-1 HASH(0x55cf7d08d010) 4 HASH(0x55cf7d391a70)
+netperf-pod-mph2c HASH(0x55cf7d1eca40) netperf-pod-z2gz7 HASH(0x55cf7d3a3d50) netperf-pod-77c9846498-5q2ln HASH(0x55cf7d3a4620) netperf-pod-gxlgv HASH(0x55cf7d3a47e8) netperf-pod-vkqds HASH(0x55cf7d1ed028) netperf-pod-77c9846498-bcqsb HASH(0x55cf7d3a4668) netperf-pod-qr4dt HASH(0x55cf7d1ae278) netperf-pod-lmgbq HASH(0x55cf7d1ed100) netperf-pod-4rwgz HASH(0x55cf7d391e00) netperf-pod-d88gf HASH(0x55cf7d3a4740) netperf-pod-j6f4z HASH(0x55cf7d3a4968)
+netperf-server HASH(0x55cf7d3a3ac8)
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+79571,80000,81000,11.56,Trans/s
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+86285,86857,87000,10.65,Trans/s
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+97642,98750,99000,9.25,Trans/s
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+88666,89600,90000,10.26,Trans/s
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+75142,75857,76000,12.34,Trans/s
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+99692,108000,110000,9.05,Trans/s
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+81230,81923,84000,11.34,Trans/s
+running command: kubectl exec -it netperf-host-zdlc9 -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.78,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+79666,80600,81000,11.56,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+78800,79750,80000,11.70,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+91111,92000,93000,9.98,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+81611,82500,83000,11.22,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+67823,69000,73000,13.69,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+92769,93833,94000,9.77,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+73541,73958,76000,12.56,Trans/s
+running command: kubectl exec -it netperf-host-5kvdn -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+94600,96000,110000,9.49,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+86230,86846,87000,10.66,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+78800,79857,81000,11.68,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+97333,98000,100000,9.31,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+87666,88600,89000,10.38,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+74142,74857,75000,12.55,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+98818,99857,100000,9.14,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+80083,80833,81000,11.50,Trans/s
+running command: kubectl exec -it netperf-host-qd78f -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.90,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+97500,97944,98000,9.26,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+90666,92000,95000,9.98,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+97000,97888,98000,9.33,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+100000,108888,110000,9.05,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+86090,86818,87000,10.66,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+115000,119375,120000,8.06,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+92100,92900,93000,9.88,Trans/s
+running command: kubectl exec -it netperf-host-lnzff -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+115333,119333,120000,7.85,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+88909,89777,90000,10.26,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+81687,82800,92000,11.18,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+87714,88666,89000,10.38,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+99750,108333,110000,9.05,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+76800,77750,78000,11.99,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.83,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+83214,83857,84000,11.08,Trans/s
+running command: kubectl exec -it netperf-host-rfg8l -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.64,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+74600,75500,76000,12.36,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+67933,69666,78000,13.62,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+74200,74866,75000,12.55,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+85687,86600,87000,10.64,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+77083,77833,78000,11.98,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+87769,88714,89000,10.38,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+68560,69000,70000,13.54,Trans/s
+running command: kubectl exec -it netperf-host-v5s28 -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+90375,90875,91000,10.14,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+99750,108333,110000,9.05,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+92625,93666,94000,9.78,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+99250,99916,100000,9.14,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+115000,119375,120000,8.06,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.83,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+88000,88800,89000,10.37,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+94000,94888,95000,9.67,Trans/s
+running command: kubectl exec -it netperf-host-v7vzk -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+115333,119333,120000,7.73,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+80846,81777,82000,11.36,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+73631,76000,78000,12.49,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+79705,80666,81000,11.55,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+92533,93500,94000,9.86,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+82846,83777,84000,11.09,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+69285,73000,87000,13.31,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+93909,94875,95000,9.68,Trans/s
+running command: kubectl exec -it netperf-host-2d7sq -- netperf -H 172.17.13.103 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.103 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+95900,96875,97000,9.43,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.106 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.106 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.82,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.119 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.119 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+94666,95750,96000,9.55,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.105 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.105 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.90,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.121 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.121 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+115333,119333,120000,7.86,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.122 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.122 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+105294,109411,110000,8.65,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.120 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.120 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+90250,90916,97000,10.10,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.104 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.104 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+115333,119333,120000,7.73,Trans/s
+running command: kubectl exec -it netperf-host-qnz4z -- netperf -H 172.17.13.11 -l 2 -P 1 -t TCP_RR -- -r 32,1024 -o P50_LATENCY,P90_LATENCY,P99_LATENCY,THROUGHPUT,THROUGHPUT_UNITS 
+MIGRATED TCP REQUEST/RESPONSE TEST from 0.0.0.0 (0.0.0.0) port 0 AF_INET to 172.17.13.11 (172.17.) port 0 AF_INET : first burst 0
+50th Percentile Latency Microseconds,90th Percentile Latency Microseconds,99th Percentile Latency Microseconds,Throughput,Throughput Units
+95562,96500,97000,9.44,Trans/s

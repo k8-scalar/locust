@@ -1,0 +1,150 @@
+apiVersion: scheduling.sigs.k8s.io/v1alpha1
+kind: AppGroup
+metadata:
+  name: teastore
+spec: # Please define the AppGroup for Teastore below. 
+  numMembers: 11
+  topologySortingAlgorithm: AlternateKahn
+  workloads:
+    - workload:
+        kind: Deployment
+        name: teastore-db
+        selector: teastore-db
+        apiVersion: apps/v1
+        namespace: teastore
+      dependencies: # no teastore-db dependencies? registry and persistence!
+        - workload:
+            kind: Deployment
+            name: teastore-registry
+            selector: teastore-registry
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+        - workload:
+            kind: Deployment
+            name: teastore-persistence
+            selector: teastore-persistence
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+    - workload:
+        kind: Deployment
+        name: teastore-registry
+        selector: teastore-registry
+        apiVersion: apps/v1
+        namespace: default
+      dependencies: # no teastore-registry dependencies? persistence and db!
+        - workload:
+            kind: Deployment
+            name: teastore-persistence
+            selector: teastore-persistence
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+        - workload:
+            kind: Deployment
+            name: teastore-db
+            selector: teastore-db
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+    - workload:
+        kind: Deployment
+        name: teastore-persistence
+        selector: teastore-persistence
+        apiVersion: apps/v1
+        namespace: default
+      dependencies: # teastore-persistence dependencies: auth additional one
+        - workload:
+            kind: Deployment
+            name: teastore-registry
+            selector: teastore-registry
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+        - workload:
+            kind: Deployment
+            name: teastore-db
+            selector: teastore-db
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+        - workload:
+            kind: Deployment
+            name: teastore-auth
+            selector: teastore-auth
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+    - workload:
+        kind: Deployment
+        name: teastore-auth
+        selector: teastore-auth
+        apiVersion: apps/v1
+        namespace: default
+      dependencies: # teastore-auth dependencies
+        - workload:
+            kind: Deployment
+            name: teastore-db
+            selector: teastore-db
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+    - workload: 
+        kind: Deployment
+        name: teastore-image
+        selector: teastore-image
+        apiVersion: apps/v1
+        namespace: default
+      dependencies: # teastore-image dependencies
+        - workload:
+            kind: Deployment
+            name: teastore-db
+            selector: teastore-db
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+    - workload:
+        kind: Deployment
+        name: teastore-recommender
+        selector: teastore-recommender
+        apiVersion: apps/v1
+        namespace: default
+      dependencies: # teastore-recommender dependencies
+        - workload:
+            kind: Deployment
+            name: teastore-db
+            selector: teastore-db
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+    - workload:
+        kind: Deployment
+        name: teastore-webui
+        selector: teastore-webui
+        apiVersion: apps/v1
+        namespace: default
+      dependencies: # teastore-webui dependencies
+        - workload:
+            kind: Deployment
+            name: teastore-db
+            selector: teastore-db
+            apiVersion: apps/v1
+            namespace: default
+          minBandwidth: "100Mi"
+          maxNetworkCost: 80
+---
+
+  
+  
+  
