@@ -54,7 +54,7 @@ kubectl get services
 
 ## Running the locust loadtest.
 1. There is a pod named `teastore-locustxxxx`.
-   1. ```kubectl exec -it teastore-locust-xxxx -n -- bash```
+   1. ```kubectl exec -it teastore-locust-xxxx -- bash```
    2. ```cd locust``` 
    3.  ```locust -f test.py --host=http://teastore-webui.default.svc.cluster.local:8080 -c 10  -r 1 --run-time 4m --no-web``` 
 
