@@ -95,9 +95,15 @@ foreach my $n1 (keys %nodes) {
 
 			# handle and print results
 			#$csv->print($fh, [ $n1, $n2, $sc1, $sc2, $sc3 ]);
-			$sc2 = int($sc2/1000);
-			
-			$sc2 = 1 if($sc2 == 0);
+			$sc1 = int($sc1);
+			$sc2 = int($sc2);
+			$sc3 = int($sc3);
+			$sc4 = int($sc4);
+			$sc1 = 9999999 if($sc1 == 0);
+			$sc2 = 9999999 if($sc2 == 0);
+			$sc3 = 9999999 if($sc3 == 0);
+			$sc4 = 9999999 if($sc4 == 0);
+
 			#print $fh "netperf_p50_latency_microseconds.origin.$n1.destination.$n2=$sc1\n";
 			print $fh "netperf.p90.latency.milliseconds.origin.$n1.destination.$n2=$sc2\n";
 			#print $fh "netperf_p99_latency_microseconds.origin.$n1.destination.$n2=$sc23\n";
